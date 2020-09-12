@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>Gamer's List</h1>
+
+        <div class="content">
+
+            <form id="add-games-form">
+                <input type="text" name="name" placeholder="Game">
+                <input type="text" name="platform" placeholder="Platform">
+                <button>Add Game</button>
+            </form>
+
+            <ul id="games-list"></ul>
+
+        </div>
+
+</script>
+        <script>
+            // Initialize Firebase
+            var firebaseConfig = {
+              apiKey: "AIzaSyBek4O1QTji9SXdMv4uA9aAB__7C_qeAek",
+              authDomain: "cse4050-webapp.firebaseapp.com",
+              databaseURL: "https://cse4050-webapp.firebaseio.com",
+              projectId: "cse4050-webapp",
+              storageBucket: "cse4050-webapp.appspot.com",
+              messagingSenderId: "878507956889",
+              appId: "1:878507956889:web:cba309487f8284e6a67608",
+              measurementId: "G-91WN5SJPQZ"
+            };
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>
