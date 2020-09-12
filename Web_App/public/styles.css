@@ -4,10 +4,19 @@ body{
 }
 
 h1{
-    color: #fff;
+    color: royalblue;
     font-size: 64px;
+    font-family: "Courier New", Courier, monospace;
     letter-spacing: 2px;
     margin-top: 80px;
+    text-align: center;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    color: royalblue;
+    font-size: large;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -29,14 +38,17 @@ li{
     padding: 20px;
     background: #f6f6f6;
     font-size: 20px;
-    color: #555;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #222021;
     position: relative;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid royalblue;
     height: 46px;
 }
 
 li:nth-child(even){
     padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
     background: #f2f2f2;
 }
 
@@ -47,14 +59,14 @@ li span{
 li span:nth-child(2){
     font-size: 16px;
     margin-top: 6px;
-    color: #999;
+    color: gray;
 }
 
 li div{
     position: absolute;
     top: 0;
     right: 0px;
-    background: rgba(255,255,255,0.6);
+    background: royalblue;
     width: 40px;
     text-align: center;
     padding: 10px 0;
@@ -67,17 +79,18 @@ form input{
     width: 38%;
     margin: 0;
     border: 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid royalblue;
     margin: 0 1%;
     padding: 10px;
     display: block;
     box-sizing: border-box;
     font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 form input:focus{
     outline: none;
-    border-bottom: 3px solid #88236f;
+    border-bottom: 3px solid royalblue;
     padding-bottom: 8px;
     transition: all ease 0.2s;
 }
@@ -90,13 +103,13 @@ form:after{
 
 button{
     border: 0;
-    background: #fff;
+    background: #222021;
     border-radius: 10px;
     padding: 13px;
     width: 14%;
     box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
     font-weight: bold;
-    font-family: ubuntu;
+    font-family: "Courier New", Courier, monospace;
     letter-spacing: 1px;
-    color: #999;
+    color: royalblue;
 }
