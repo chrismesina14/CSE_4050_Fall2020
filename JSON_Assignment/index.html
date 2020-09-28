@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Assignment</title>
+</head>
+<body>
+  <p id="name"></p>
+  <p id="job"></p>
+
+  <script>
+   const person = '{"name":"Christian", "age":23 }'
+   const job = { name: "Christian", age: 23, job: "Software Engineer" };
+   
+   const myName = JSON.parse(person);
+   document.getElementById("name").innerHTML = myName.name + ", " + myName.age;
+   
+   const myJob = JSON.stringify(job);
+   document.getElementById("job").innerHTML = myJob;
+  </script>
+  
+</body>
+
+</html>
+
+
