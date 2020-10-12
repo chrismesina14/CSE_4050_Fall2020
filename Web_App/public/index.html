@@ -5,21 +5,30 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+
+        <!-- NAVBAR -->
+        <div class="topnav">
+            <div class="topnav-right">
+                <a href="#login">Login</a>
+                <a href="#signup">Sign up</a>
+            </div>
+        </div>
+
+        <br><br>
+
         <section class="logo">
-            <img src="/img/gamer.png" alt="gamer logo">
+            <img src="img/gamer.png" alt="gamer logo">
             <h1>Listing your games doesn't get easier and simpler than this!</h1>
         </section>
         
         <div class="content">
-
             <form id="add-games-form">
                 <input type="text" name="name" placeholder="Game" required>
                 <input type="text" name="platform" placeholder="Platform" required>
                 <button>Add Game</button>
             </form>
-
+            
             <ul id="games-list"></ul>
-
         </div>
 
         <script>

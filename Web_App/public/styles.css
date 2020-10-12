@@ -3,6 +3,31 @@ body{
     font-family: ubuntu;
 }
 
+.topnav {
+    overflow: hidden;
+    background-color:#1761a0;
+}
+
+.topnav a {
+    float: left;
+    font-family: 'Courier New', Courier, monospace;
+    color: #222021;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #222021;
+    color: #1761a0;
+}
+
+.topnav-right {
+    float: right;
+}
+
 .logo img{
     display: block;
     margin-left: auto;
