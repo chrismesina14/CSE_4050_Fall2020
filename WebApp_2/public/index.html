@@ -1,0 +1,159 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="index.css">
+  <title>Gamer's List</title>
+</head>
+<body class="indigo darken-3"">
+
+
+  <!-- TODO: Create an Update and Delete functions for the data. -->
+
+  <!-- Navbar -->
+  <nav class="z-depth-0 black">
+    <div class="nav-wrapper container">
+      <!--<a href="#" class="brand-logo">
+        <img src="img/gamer.png" style="width: 170px; margin-top: 1px;">
+      </a>-->
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="logged-in" style="display: none;">
+            <a href="#" class="blue-text text-darken-1 modal-trigger" data-target="modal-account">Account</a>
+          </li>
+          <li class="logged-in" style="display: none;">
+            <a href="#" class="blue-text text-darken-1 modal-trigger" data-target="modal-create">Add Game</a>
+          </li>
+          <li class="logged-in" style="display: none;">
+            <a href="#" class="blue-text text-darken-1" id="logout">Logout</a>
+          </li>
+          <li class="logged-out" style="display: none;">
+            <a href="#" class="blue-text text-darken-1 modal-trigger" data-target="modal-login">Login</a>
+          </li>
+          <li class="logged-out" style="display: none;">
+            <a href="#" class="blue-text text-darken-1 modal-trigger" data-target="modal-signup">Sign up</a>
+          </li>
+        </span>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Admin Actions
+  <form class="center-align admin-actions" style="margin: 40px auto; max-width: 300px;">
+    <input type="email" placeholder="User email" id="admin-email" required />
+    <button class="btn indigo darken-4 z-depth-0">Make Admin</button>
+  </form> -->
+
+  <!-- Sign Up Modal -->
+  <div id="modal-signup" class="modal">
+    <div class="modal-content blue lighten-5">
+      <h4>Sign up</h4><br />
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Enter an Email Address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose a Password</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="signup-username" required />
+          <label for="signup-username">Enter a Username</label>
+        </div>
+        <button class="btn blue darken-3 z-depth-0">Sign up</button>
+        <p class="error pink-text center-align"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="modal-login" class="modal">
+    <div class="modal-content blue lighten-5">
+      <h4>Login</h4><br />
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email Address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Password</label>
+        </div>
+        <button class="btn blue darken-3 z-depth-0">Login</button>
+        <p class="error pink-text center-align"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Account Info Modal -->
+  <div id="modal-account" class="modal">
+    <div class="modal-content center-align blue lighten-5 black-text">
+      <h4>Account Information</h4><br />
+      <div class="account-details"></div>
+    </div>
+  </div>
+
+  <!-- Add Game Modal -->
+  <div id="modal-create" class="modal">
+    <div class="modal-content blue lighten-5">
+      <h4>Add Game</h4><br />
+      <form id="create-form">
+        <div class="input-field">
+          <input type="text" id="name" required>
+          <label for="name">Game</label>
+        </div>
+        <div class="input-field">
+          <textarea id="description" class="materialize-textarea" required></textarea>
+          <label for="description">Game Description</label>
+        </div>
+        <button class="btn blue darken-3 z-depth-0">Add</button>
+      </form>
+    </div>
+  </div>
+
+  <br><br>
+  <img src="img/gamer.png" style=" display: block; margin-left: auto; margin-right: auto; width: 50%;">
+
+  <!-- Game List -->
+  <div class="container" style="margin-top: 40px;">
+    <ul class="collapsible z-depth-0 Games" style="border: none;">
+    
+    </ul>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+  <!--<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-functions.js"></script>-->
+  
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCpPgsNrMUcdFwpY7SHXP8Yr0NHbuUK8XY",
+      authDomain: "gamer-s-list.firebaseapp.com",
+      databaseURL: "https://gamer-s-list.firebaseio.com",
+      projectId: "gamer-s-list",
+      storageBucket: "gamer-s-list.appspot.com",
+      messagingSenderId: "774833084785",
+      appId: "1:774833084785:web:4e35fe032c7dda116a3ed0",
+      measurementId: "G-H23TB5NV8H"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    //const functions = firebase.functions();
+
+</script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+</html>
