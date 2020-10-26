@@ -1,4 +1,5 @@
-Web App link: https://cse-4050-webapp.web.app/
+Web App 1 link: https://cse-4050-webapp.web.app/
+Web App 2 link: https://gamer-s-list.web.app/
 
 Progress Report 1 (08/31/2020):
 - For the Git assignment, I've managed to create a GitHub repository for this class, CSE 4050, by watching a couple of videos about Git. I've learned different commands on Git that will help me throughout the semester so that I can push or pull any assignments from my GitHub repository. I've learned new commands like "git checkout, git revert, git reset, git status, and git log". 
@@ -16,3 +17,6 @@ Progress Report 3 (09/28/2020):
 
 Progress Report 4 (10/12/2020):
 - For this progress report, I've made minimal changes on my web app by implementing a 'NavBar' and placing a "Login" and "Sign up" button on my HTML document so that I can modify these buttons for the Firebase authentication assignment. I am still learning on how to create modal forms so I can link them to the Firebase Authentication service. Also, I am still conceptualizing on how I will structure my web app or some additional things I will add/modify.
+
+Progress Report 5 (10/26/2020):
+- For this progress report, I've created a whole new Web App for the past two weeks with the help of several online resources. I think I've managed to implement and finish the Firebase Authentication assignment where the user can Log in and Sign up on my Web App. Also, this new Web App has the same features and ideas on my previous Web App but there are key differences on each one. Furthermore, this Web App implements Materialize CSS in which I've learned a bit in this past couple of weeks. I still need to fix a lot of things on this new Web App like updating and deleting some of the data stored by the users.
