@@ -1,17 +1,17 @@
 body{
-    background: #222021;
+    background: #1761a0;
     font-family: ubuntu;
 }
 
 .topnav {
     overflow: hidden;
-    background-color:#1761a0;
+    background-color:#222021;
 }
 
 .topnav a {
     float: left;
     font-family: 'Courier New', Courier, monospace;
-    color: #222021;
+    color: #1761a0;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -20,8 +20,8 @@ body{
 }
 
 .topnav a:hover {
-    background-color: #222021;
-    color: #1761a0;
+    background-color: #1761a0;
+    color: #222021;
 }
 
 .topnav-right {
@@ -37,7 +37,7 @@ body{
 
 .logo h1{
     font-family: 'Courier New', Courier, monospace;
-    color: #1761a0;
+    color: black;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
