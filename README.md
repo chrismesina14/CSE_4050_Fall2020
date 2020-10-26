@@ -1,4 +1,5 @@
 Web App 1 link: https://cse-4050-webapp.web.app/
+
 Web App 2 link: https://gamer-s-list.web.app/
 
 Progress Report 1 (08/31/2020):
