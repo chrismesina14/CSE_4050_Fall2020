@@ -1,5 +1,5 @@
 # CSE 4050: Web Application Development
-- Web application protocols (IP, TCP, DNS, TLS, HTTP), Web standards (HTTP, CSS, Javascript), database backends, Web server execution environments, client-side frameworks, developer tools, application security.
+Web application protocols (IP, TCP, DNS, TLS, HTTP), Web standards (HTTP, CSS, Javascript), database backends, Web server execution environments, client-side frameworks, developer tools, application security.
 
 
 Web App 1 link: https://cse-4050-webapp.web.app/
