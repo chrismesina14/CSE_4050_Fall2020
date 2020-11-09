@@ -2,9 +2,9 @@
 Web application protocols (IP, TCP, DNS, TLS, HTTP), Web standards (HTTP, CSS, Javascript), database backends, Web server execution environments, client-side frameworks, developer tools, application security.
 
 
-Web App 1 link: https://cse-4050-webapp.web.app/
+Web App 1 (Optional) link: https://cse-4050-webapp.web.app/ (This Web App only implements Cloud Firestore)
 
-Web App 2 link: https://gamer-s-list.web.app/
+Web App 2 (Main) link: https://gamer-s-list.web.app/ (This Web App implements both Cloud Firestore and Firebase Authentication)
 
 
 Progress Report 1 (08/31/2020):
@@ -29,3 +29,7 @@ Progress Report 4 (10/12/2020):
 
 Progress Report 5 (10/26/2020):
 - For this progress report, I've created a whole new Web App for the past two weeks with the help of several online resources. I think I've managed to implement and finish the Firebase Authentication assignment where the user can Log in and Sign up on my Web App. Also, this new Web App has the same features and ideas on my previous Web App but there are key differences on each one. Furthermore, this Web App implements Materialize CSS in which I've learned a bit in this past couple of weeks. I still need to fix a lot of things on this new Web App like updating and deleting some of the data stored by the users.
+- Users can Login to their existing account or Sign up. They will be prompted to enter an email, password, and a username. After that, the user can view the lists of games on my Web App and he/she can add a game by clicking the button. The user can also logout from their accounts by clicking the button. Also, they can view their account details/information by clicking on the 'Account' button.
+
+Progress Report 6 (11/09/2020)
+- For this progress report, I've updated my Web App 2, my main Web App for this semester, to be viewed on mobile devices correctly. Before, the buttons won't show up on mobile devices so I implemented a materialize CSS and JQuery codes/functions to make a side bar navigation for the buttons. Users can now see the login, sign up, add a game, and view their account information using their mobile devices. However, I still need to fix the logout button because it won't log out the user whenever they click the button on the side bar navigation. They can still logout on a web browser but not on mobile devices.
