@@ -5,20 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Gamer's List</title>
 </head>
 <body class="indigo darken-3"">
 
 
-  <!-- TODO: Create an Update and Delete functions for the data. -->
+  <!-- TODO: Create an Update and Delete functions for the data. Fix logout button on sidenav-trigger so it logs out the user -->
 
   <!-- Navbar -->
   <nav class="z-depth-0 black">
     <div class="nav-wrapper container">
-      <!--<a href="#" class="brand-logo">
-        <img src="img/gamer.png" style="width: 170px; margin-top: 1px;">
-      </a>-->
+      <a href="#" class="sidenav-trigger" data-target="mobile-links">
+        <i class="material-icons">menu</i>
+      </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="logged-in" style="display: none;">
             <a href="#" class="blue-text text-darken-1 modal-trigger" data-target="modal-account">Account</a>
@@ -35,10 +35,27 @@
           <li class="logged-out" style="display: none;">
             <a href="#" class="blue-text text-darken-1 modal-trigger" data-target="modal-signup">Sign up</a>
           </li>
-        </span>
       </ul>
     </div>
   </nav>
+
+  <ul class="sidenav black" id="mobile-links">
+    <li class="logged-in" style="display: none;">
+      <a href="#" class="blue-text text-darken-1 modal-trigger" data-target="modal-account">Account</a>
+    </li>
+    <li class="logged-in" style="display: none;">
+      <a href="#" class="blue-text text-darken-1 modal-trigger" data-target="modal-create">Add Game</a>
+    </li>
+    <li class="logged-in" style="display: none;">
+      <a href="#" class="blue-text text-darken-1 sidenav-close" id="logout">Logout</a>
+    </li>
+    <li class="logged-out" style="display: none;">
+      <a href="#" class="blue-text text-darken-1 modal-trigger" data-target="modal-login">Login</a>
+    </li>
+    <li class="logged-out" style="display: none;">
+      <a href="#" class="blue-text text-darken-1 modal-trigger" data-target="modal-signup">Sign up</a>
+    </li>
+  </ul>
 
   <!-- Admin Actions
   <form class="center-align admin-actions" style="margin: 40px auto; max-width: 300px;">
@@ -151,6 +168,7 @@
 
 </script>
 
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="scripts/app.js"></script>
