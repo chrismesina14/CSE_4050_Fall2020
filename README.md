@@ -33,3 +33,6 @@ Progress Report 5 (10/26/2020):
 
 Progress Report 6 (11/09/2020)
 - For this progress report, I've updated my Web App 2, my main Web App for this semester, to be viewed on mobile devices correctly. Before, the buttons won't show up on mobile devices so I implemented a materialize CSS and JQuery codes/functions to make a side bar navigation for the buttons. Users can now see the login, sign up, add a game, and view their account information using their mobile devices. However, I still need to fix the logout button because it won't log out the user whenever they click the button on the side bar navigation. They can still logout on a web browser but not on mobile devices.
+
+Progress Report 7 (11/23/2020)
+- For this progress report, I've implemented an "Add Platform" functionality where the users can add the platform for the game that they added. The user will be able to see his/her own video game title, its platform(s), and its description. I'm having a hard time implementing a delete function for my web app but I will still be trying to get it to work by the next few weeks. However, I am confident that I have finished the Web App 2 assignment of the course. 
