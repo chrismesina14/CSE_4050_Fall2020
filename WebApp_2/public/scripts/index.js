@@ -35,7 +35,7 @@ const setupGames = (data) => {
       const game = doc.data();
       const li = `
         <li>
-          <div class="collapsible-header black blue-text text-darken-1">${game.Name}</div>
+          <div class="collapsible-header black blue-text text-darken-1">${game.Name} <br><br>(${game.Platform})</div>
           <div class="collapsible-body blue lighten-5 black-text">${game.Description}</div>
         </li>
       `;

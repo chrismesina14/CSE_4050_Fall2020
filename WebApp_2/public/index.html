@@ -8,10 +8,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Gamer's List</title>
 </head>
-<body class="indigo darken-3"">
-
-
-  <!-- TODO: Create an Update and Delete functions for the data. Fix logout button on sidenav-trigger so it logs out the user -->
+<body class="indigo darken-3">
 
   <!-- Navbar -->
   <nav class="z-depth-0 black">
@@ -24,7 +21,7 @@
             <a href="#" class="blue-text text-darken-1 modal-trigger" data-target="modal-account">Account</a>
           </li>
           <li class="logged-in" style="display: none;">
-            <a href="#" class="blue-text text-darken-1 modal-trigger" data-target="modal-create">Add Game</a>
+            <a href="#" class="blue-text text-darken-1 modal-trigger" data-target="modal-create">Add a Game</a>
           </li>
           <li class="logged-in" style="display: none;">
             <a href="#" class="blue-text text-darken-1" id="logout">Logout</a>
@@ -121,6 +118,10 @@
         <div class="input-field">
           <input type="text" id="name" required>
           <label for="name">Game</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="platform" required>
+          <label for="platform">Platform</label>
         </div>
         <div class="input-field">
           <textarea id="description" class="materialize-textarea" required></textarea>

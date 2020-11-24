@@ -21,6 +21,7 @@ createForm.addEventListener('submit', (e) => {
 
     db.collection('Games').add({
         Name: createForm['name'].value,
+        Platform: createForm['platform'].value,
         Description: createForm['description'].value
     }).then(() => {
         // Closes the signup modal and resets the form
